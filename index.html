@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laman Produk Kenaf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f5f5;
+    }
+    header, .admin-box, .checkout-box {
+      text-align: center;
+      padding: 20px;
+      background: #4CAF50;
+      color: white;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+    .product-image img {
+      width: 100%;
+      height: auto;
+    }
+    .product-details {
+      padding: 20px;
+    }
+    .product-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    .product-price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #FFC107;
+    }
+    .buy-button, .pay-btn, .login-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .buy-button:hover, .pay-btn:hover, .login-btn:hover {
+      background-color: #388E3C;
+    }
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 26px;
+      color: #4CAF50;
+    }
+    form input[type="text"], form input[type="password"] {
+      padding: 10px;
+      width: 80%;
+      margin: 10px auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Produk Kenaf Mesra Alam</h1>
+  </header>
+
+  <div class="container">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="kenaf.jpg" alt="Insulasi Kenaf">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Insulasi Kenaf Premium</h2>
+        <p class="product-price">RM250.00</p>
+        <p>Bahan insulasi dari gentian kenaf, sesuai untuk pembinaan hijau dan penjimatan tenaga.</p>
+        <a href="#checkout" class="buy-button">Checkout Sekarang</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="checkout" class="checkout-box">
+    <h2 class="section-title">Checkout - TNG eWallet</h2>
+    <form method="POST" action="https://www.mobile88.com/epayment/entry.asp">
+      <input type="hidden" name="MerchantCode" value="YOUR_MERCHANT_CODE">
+      <input type="hidden" name="PaymentId" value="TNG">
+      <input type="hidden" name="RefNo" value="ORDER123456">
+      <input type="hidden" name="Amount" value="250.00">
+      <input type="hidden" name="Currency" value="MYR">
+      <input type="hidden" name="ProdDesc" value="Insulasi Kenaf Premium">
+      <input type="hidden" name="UserName" value="MOHAMAD">
+      <input type="hidden" name="UserEmail" value="email@example.com">
+      <input type="hidden" name="Signature" value="GENERATED_SIGNATURE">
+      <button type="submit" class="pay-btn">Bayar dengan TNG eWallet</button>
+    </form>
+  </div>
+
+  <div class="admin-box">
+    <h2 class="section-title">Admin Login</h2>
+    <form>
+      <input type="text" placeholder="Nama Pengguna" required>
+      <input type="password" placeholder="Kata Laluan" required>
+      <button type="submit" class="login-btn">Log Masuk Admin</button>
+    </form>
+  </div>
+
+</body>
+</html>
